@@ -1,0 +1,80 @@
+<br /><br /><br /><br />
+<div align="center">
+  <img src="assets\logo_Forem.jpg" width="6%" aria-required="true" />
+</div>
+<div class="container" id="tout2">
+  <form [formGroup]="cvForm" (ngSubmit)="onSubmit()">
+    <div>
+      <input
+        type="text"
+        id="nom"
+        formControlName="nom"
+        placeholder="nom"
+        minlength="5"
+        maxlength="15"
+        required="true"
+      />
+    </div>
+    <div align="center" style="color: red" *ngIf="nom">nom In obligatoire</div>
+    <div>
+      <input
+        type="text"
+        id="prenom"
+        formControlName="prenom"
+        placeholder="prénom"
+        minlength="5"
+        maxlength="15"
+        required="true"
+      />
+      <div>
+        <div align="center" style="color: red" *ngIf="prenom">
+          prenom In obligatoire
+        </div>
+        <input
+          type="email"
+          id="email"
+          formControlName="email"
+          placeholder="email"
+          minlength="15"
+          maxlength="30"
+          required="true"
+        />
+      </div>
+      <div align="center" style="color: red" *ngIf="email">
+        email In obligatoire
+      </div>
+      <div>
+        <input
+          type="password"
+          id="password"
+          formControlName="password"
+          placeholder="password"
+          minlength="5"
+          maxlength="15"
+          required="true"
+        />
+      </div>
+      <div align="center" style="color: red" *ngIf="password">
+        password In obligatoire
+      </div>
+      <button
+        style="
+          inline-size: 340px;
+          block-size: 45px;
+          border-radius: 5px;
+          margin: 5px;
+          font-size: 20px;
+        "
+        type="submit"
+        [disabled]="!cvForm.valid"
+      >
+        Soumettre
+      </button>
+    </div>
+  </form>
+  <p style="color: red" align="center">
+    *Veuillez entrer votre login et password reçu par email pour vous connecter
+    au portail du forem.
+  </p>
+  <p align="center">Merci!</p>
+</div>

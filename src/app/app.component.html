@@ -1,0 +1,10 @@
+<app-navigation></app-navigation>
+<router-outlet></router-outlet>
+
+<div>
+  <app-add-article (addArticle)="onAddArticle($event)"></app-add-article>
+  <app-item-article
+    [articles]="shoppingList"
+    (removeArticle)="onRemoveArticle($event)"
+  ></app-item-article>
+</div>

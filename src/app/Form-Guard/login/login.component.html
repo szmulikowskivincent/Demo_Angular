@@ -1,0 +1,91 @@
+<h3>Formulaire avec auth-gards in Angular</h3>
+<div align="left" class="container">
+  <img
+    src="assets\Imgs\Logo_Cokkie.jpg"
+    width="45%"
+    style="border-radius: 5px; border: solid 2.5px rgb(0, 253, 0)"
+  />
+  <div>
+    <p style="margin: 4px">Login admin/username</p>
+    <form [formGroup]="loginForm" (ngSubmit)="seConnecter()">
+      <div class="form-group" id="tout2">
+        <div>
+          <label style="margin: 11px" for="role">Rôle:</label>
+          <br />
+          <select
+            id="role"
+            placeholder="Role"
+            placeholder="Sélectionnez un rôle"
+            formControlName="role"
+            class="valid-input"
+            class="invalid-input"
+          >
+            <option value="admin">Admin</option>
+            <option value="utilisateur">Utilisateur</option>
+            <option value="autre">Autre</option>
+          </select>
+          <p style="color: red; margin: 4px">Role required</p>
+          <div
+            align="center"
+            style="color: red"
+            *ngIf="role"
+            required="required"
+          >
+            Role obligatoire
+          </div>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <br />
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            placeholder="Email"
+            class="valid-input"
+            class="invalid-input"
+            required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+          />
+          <p style="color: red; margin: 4px">email required</p>
+          <div align="center" style="color: red" *ngIf="email" required="">
+            Email obligatoire
+          </div>
+          <div align="center" style="color: red" *ngIf="pattern" required="">
+            Format email obligatoire (ex:moi@gmail.com)
+          </div>
+        </div>
+        <div>
+          <label for="password">Mot de passe:</label>
+          <br />
+          <input
+            type="password"
+            id="password"
+            formControlName="password"
+            placeholder="password"
+            class="valid-input"
+            class="invalid-input"
+          />
+          <p style="color: red; margin: 4px">password required</p>
+          <div
+            align="center"
+            style="color: red"
+            *ngIf="password"
+            required="required"
+          >
+            Passsword obligatoire
+          </div>
+        </div>
+        <button type="submit" [disabled]="loginForm.invalid">
+          Se connecter
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<p style="color: red; margin: 11px">password admin: Moi1971moi</p>
+<p style="color: red; margin: 11px">password utilisateur: root</p>
+<br /><br /><br /><br /><br /><br />
+<footer align="center">
+  Szmulikowski Vincent ❙❙ exo.formulaire auth-guards Angular
+</footer>

@@ -1,0 +1,73 @@
+<div class="container">
+  <div align="center">
+    <h2>My-Form</h2>
+    <div class="fadeIn first">
+      <img
+        src="assets\Imgs\avatar_Defaut.jpg"
+        id="icon"
+        alt="User Icon"
+        title="🔴déconnecté"
+      />
+    </div>
+  </div>
+  <br />
+  <form (ngSubmit)="onSubmit()" #monFormulaire="ngForm">
+    <div class="form-group" id="tout2">
+      <input
+        type="text"
+        [(ngModel)]="valeur"
+        [(ngModel)]="Login"
+        required
+        name="Login"
+        class="form-control"
+        autocomplete="off"
+        placeholder="Login"
+        minlength="8"
+        maxlength="12"
+        style="inline-size: 300px"
+      />
+      <div align="center" style="color: red" *ngIf="valeur">
+        Log In obligatoire
+      </div>
+      <br />
+      <input
+        [(ngModel)]="defaultPassword"
+        id="password"
+        type="password"
+        name="password"
+        class="form-control"
+        autocomplete="off"
+        [required]="true"
+        required="true"
+        placeholder="Password"
+        minlength="8"
+        maxlength="12"
+        style="inline-size: 300px"
+      />
+      <div align="center" style="color: red" *ngIf="valeur">
+        Password obligatoire
+      </div>
+    </div>
+    <br />
+    <!--submit ()-->
+    <div align="center">
+      <input
+        type="submit"
+        [disabled]="!monFormulaire.form.valid"
+        class="button"
+        value="Log In"
+        (click)="onAlert()"
+      />
+    </div>
+    <div *ngIf="alertVisible" class="custom-alert">
+      <span onclick="('')" routerLink="/Test" class="close-button"></span>
+      <h2 align="center" style="color: #5a5656">😁 Thank you!</h2>
+      <br />
+      {{ valeur }}
+      <h3 class="message">
+        👉 Click on the cross to access the main-page...🌐
+      </h3>
+    </div>
+  </form>
+</div>
+<footer align="center">Szmulikowski Vincent ❙❙ exo.formulaire Angular</footer>

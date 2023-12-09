@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block-start: 20px;
+    max-inline-size: 390px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: rgb(224, 240, 243);
+    border: 1.5px solid rgb(105, 102, 102);
+  }
+  
+  
+  h2 {
+    padding: 0px;
+    color: rgb(0, 183, 255);
+  }
+  
+  input {
+    background-color: aliceblue;
+    border: solid 2.5px rgb(104, 102, 102);
+    border-radius: 5px;
+    inline-size: 350px;
+    block-size: 35px;
+  }
+  
+  button {
+    background-color: rgb(6, 173, 14);
+    border: solid 2.5px rgb(255, 255, 255);
+    color:aliceblue;
+    border-radius: 5px;
+    inline-size: 150px;
+    block-size: 35px;
+    margin:10px;
+    size: 25px;
+  }
+  
+  footer {
+    align-items: center;
+    inline-size: 2080px;
+    block-size: 35px;
+    margin: 10px;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: rgb(224, 240, 243);
+    border: 1.5px solid rgb(105, 102, 102);
+    color: rgb(0, 0, 0);
+  }

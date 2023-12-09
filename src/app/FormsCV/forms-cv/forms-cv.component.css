@@ -1,0 +1,126 @@
+.container {
+  position: absolute;
+  inline-size: 750px;
+  block-size: 850px;
+  border-radius: 5px;
+  background-color: rgb(224, 240, 243);
+  border: 1.5px solid rgb(105, 102, 102);
+  padding: 15px;
+  margin: 10px;
+  inset-block-start: 54%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="email"] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 11px 28px;
+  text-align: center;
+  font-size: 17px;
+  margin: 5px;
+  inline-size: 325px;
+  block-size: 15px;
+  border: 2px solid #757474;
+  border-radius: 5px;
+}
+
+input[type="text"] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 11px 28px;
+  text-align: center;
+  font-size: 17px;
+  margin: 5px;
+  inline-size: 300px;
+  block-size: 15px;
+  border: 2px solid #757474;
+  border-radius: 5px;
+}
+
+input[type="password"] {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 11px 28px;
+  text-align: center;
+  font-size: 17px;
+  margin: 5px;
+  inline-size: 250px;
+  block-size: 15px;
+  border: 2px solid #757474;
+  border-radius: 5px;
+}
+
+select {
+  background-color: #f6f6f6;
+  border: none;
+  color: #0d0d0d;
+  padding: 11px 28px;
+  text-align: center;
+  font-size: 20px;
+  margin: 5px;
+  inline-size: 340px;
+  border: 2px solid #757474;
+  border-radius: 5px;
+}
+
+.date {
+  background-color: rgb(97, 193, 223);
+  border: none;
+  color: #0d0d0d;
+  padding: 11px 28px;
+  text-align: center;
+  font-size: 20px;
+  margin: 5px;
+  inline-size: 350px;
+  border: 2px solid #757474;
+  border-radius: 5px;
+}
+
+.button {
+  text-align: center;
+  border: 2px solid #757474;
+  background-color: rgb(97, 193, 223);
+  border: none;
+  color: #ffffff;
+  padding: 11px 28px;
+  font-size: 20px;
+  margin: 5px;
+  inline-size: 730px;
+  block-size: 45px;
+  border-radius: 5px;
+}
+
+#tout3 input[required] {
+  border-inline-end: 4px solid orange;
+}
+#tout2 input:invalid {
+  border-inline-end: 4px solid red;
+}
+#tout2 input:valid {
+  border-inline-end: 4px solid green;
+}
+
+#tout4 input:invalid {
+  border-inline-end: 4px solid rgb(224, 240, 243);
+}
+#tout4 input:valid {
+  border-inline-end: 4px solid rgb(224, 240, 243);
+}
+
+footer {
+  position: absolute;
+  inset-block-end: 0;
+  inline-size: 100%;
+  inline-size: 2080px;
+  block-size: 35px;
+  margin: 10px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: rgb(224, 240, 243);
+  border: 1.5px solid rgb(105, 102, 102);
+  color: rgb(0, 0, 0);
+}

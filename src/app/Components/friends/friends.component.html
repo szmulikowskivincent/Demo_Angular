@@ -1,0 +1,86 @@
+<br /><br />
+<div align="center">
+  <img
+    src="assets\Imgs\Logo_Friends.jpg"
+    width="6%"
+    style="border-radius: 50%"
+  />
+  <div>
+    <!-- friends.component.html -->
+    <div>
+      <h2 align="center">Liste d'amis</h2>
+      <div class="container">
+        <table>
+          <tr *ngFor="let friend of friendsList">
+            <td>
+              <img
+                [src]="friend.avatarUrl"
+                alt="{{ friend.name }} Avatar"
+                width="50"
+                height="50"
+              />
+            </td>
+            <td>{{ friend.name }}</td>
+            <td>
+              <button (click)="removeFriend(friend)">Supprimer</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <h2 align="center">Ajouter un ami</h2>
+      <div class="container">
+        <input
+          type="text"
+          [(ngModel)]="newFriend.name"
+          placeholder="Nom de l'ami"
+        />
+        &nbsp;&nbsp;
+        <input
+          type="text"
+          [(ngModel)]="newFriend.avatarUrl"
+          placeholder="URL de l'avatar"
+        />
+        <button
+          style="inline-size: 85px; block-size: 45px"
+          (click)="addFriend()"
+        >
+          Ajouter
+        </button>
+      </div>
+    </div>
+    <br />
+    <div align="center">
+      &#160;&nbsp;<button
+        onclick="window.location.reload ();"
+        style="
+          color: rgb(255, 255, 255);
+          border: 2.5px solid #6b7566;
+          background-color: #56baed;
+        "
+        class="button"
+        title="⟳ refresh page"
+        value="Clear"
+      >
+        Refresh Page
+      </button>
+    </div>
+    <br />
+    <footer align="center">
+      Szmulikowski Vincent ❙❙ exo.item-friends Angular
+    </footer>
+  </div>
+</div>
+<div>
+  <ul>
+    <li>
+      Joseph//url:http://diffusionph.cccommunication.biz/jpgok/RepGR/691/691668_39.jpg
+    </li>
+    <li>
+      Marc//url:https://d1nslcd7m2225b.cloudfront.net/Pictures/480xAny/4/2/1/1133421_Giuseppe__Capotondi.jpg
+    </li>
+    <li>
+      Jhon//url:https://www.lavanguardia.com/uploads/2021/11/29/61a47f48b5159.jpeg
+    </li>
+  </ul>
+</div>

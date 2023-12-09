@@ -1,0 +1,247 @@
+<div class="container" id="tout2">
+  <img src="assets\logo_Forem.jpg" width="10%" style="margin: 5px" />
+  <form [formGroup]="cvForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label style="margin: 5px" for="file">Télécharger un fichier:</label>
+      <input
+        type="file"
+        id="file"
+        formControlName="file"
+        required="true"
+        [required]="true"
+      />
+    </div>
+    <!-- Informations personnelles -->
+    <div>
+      <input
+        type="text"
+        id="nom"
+        formControlName="nom"
+        placeholder="nom"
+        required="true"
+        [required]="true"
+      />
+      <div align="center" style="color: red" *ngIf="nom">
+        *nom In obligatoire
+      </div>
+      <input
+        type="text"
+        id="prenom"
+        formControlName="prenom"
+        placeholder="prénom"
+        minlength="5"
+        maxlength="15"
+        required="true"
+        [required]="true"
+      />
+      <div align="center" style="color: red" *ngIf="prenom">
+        prénom In obligatoire
+      </div>
+      <input
+        type="text"
+        id="titreFonction"
+        formControlName="titreFonction"
+        placeholder="fonction"
+        minlength="5"
+        maxlength="25"
+        required="true"
+        [required]="true"
+      />
+      <div align="center" style="color: red" *ngIf="fonction">
+        *fonction In obligatoire
+      </div>
+      <input
+        type="text"
+        id="pseudo"
+        formControlName="pseudo"
+        placeholder="pseudo"
+        minlength="5"
+        maxlength="15"
+        required="true"
+        [required]="true"
+      />
+      <div align="center" style="color: red" *ngIf="pseudo">
+        pseudo In obligatoire
+      </div>
+      <br />
+      <input
+        style="inline-size: 670px"
+        type="text"
+        id="tel"
+        formControlName="tel"
+        placeholder="téléphone"
+        required="true"
+        [required]="true"
+      />
+      <div align="center" style="color: red" *ngIf="tel">
+        téléphone In obligatoire
+      </div>
+      <input
+        style="inline-size: 670px"
+        type="email"
+        id="email"
+        formControlName="email"
+        placeholder="email"
+        minlength="15"
+        maxlength="35"
+        required="true"
+        [required]="true"
+      />
+      <div align="center" style="color: red" *ngIf="email">
+        email In obligatoire
+      </div>
+      <!--Adresse-->
+      <div formGroupName="adresse">
+        <input
+          type="text"
+          id="rue"
+          formControlName="rue"
+          placeholder="rue"
+          required="true"
+          [required]="true"
+        />
+        <div align="center" style="color: red" *ngIf="adresse">
+          adresse In obligatoire
+        </div>
+        <input
+          type="text"
+          id="num"
+          formControlName="num"
+          placeholder="numéro"
+          required="true"
+          [required]="true"
+        />
+        <div align="center" style="color: red" *ngIf="num">
+          numéro In obligatoire
+        </div>
+        <input
+          style="inline-size: 670px"
+          type="text"
+          id="cp"
+          formControlName="cp"
+          placeholder="code postale"
+          minlength="4"
+          maxlength="4"
+          required="true"
+          [required]="true"
+        />
+        <div align="center" style="color: red" *ngIf="cp">
+          code postale In obligatoire
+        </div>
+      </div>
+      <input
+        style="inline-size: 670px"
+        type="text"
+        id="ville"
+        formControlName="ville"
+        placeholder="ville de résidence principale"
+        minlength="5"
+        maxlength="15"
+        required="true"
+        [required]="true"
+      />
+      <div align="center" style="color: red" *ngIf="ville">
+        ville In obligatoire
+      </div>
+      <!--Expériences professionnelles-->
+      <div formGroupName="experiences">
+        <input
+          type="text"
+          id="exp1"
+          formControlName="exp1"
+          placeholder="expérience professionelle (1)"
+          required="true"
+          [required]="true"
+        />
+        <div align="center" style="color: red" *ngIf="exp1">
+          expérience In obligatoire
+        </div>
+        <input
+          type="text"
+          id="exp2"
+          formControlName="exp2"
+          placeholder="expérience professionelle (2)"
+          required="true"
+          [required]="true"
+        />
+        <div align="center" style="color: red" *ngIf="exp2">
+          expérience In obligatoire
+        </div>
+        <input
+          style="inline-size: 670px"
+          type="text"
+          id="exp3"
+          formControlName="exp3"
+          placeholder="expérience professionelle (3)"
+          required="true"
+          [required]="true"
+        />
+        <div align="center" style="color: red" *ngIf="exp3">
+          expérience In obligatoire
+        </div>
+      </div>
+
+      <!--Etudes-->
+      <input
+        type="text"
+        id="diplomes"
+        formControlName="diplomes"
+        placeholder="diplôme"
+        required="true"
+      />
+      <div align="center" style="color: red" *ngIf="diplome">
+        diplome In obligatoire
+      </div>
+      <input
+        type="text"
+        id="etudes"
+        formControlName="etudes"
+        placeholder="études"
+        required="true"
+        [required]="true"
+      />
+      <div align="center" style="color: red" *ngIf="etudes">
+        etudes In obligatoire
+      </div>
+      <input
+        style="inline-size: 670px"
+        type="text"
+        id="brevets"
+        formControlName="brevets"
+        placeholder="brevêts"
+        required="true"
+        [required]="true"
+      />
+      <div align="center" style="color: red" *ngIf="brevets">
+        brevets In obligatoire
+      </div>
+      <br />
+      <textarea
+        style="inline-size: 720px; block-size: 100px; margin: 5px"
+        placeholder="Description de la fonction:"
+        id="descriptionFonction"
+        formControlName="descriptionFonction"
+        minlength="20"
+        maxlength="255"
+        required="true"
+        [required]="true"
+      ></textarea>
+      <div align="center" style="color: red" *ngIf="descriptionFonction">
+        description fonction In obligatoire
+      </div>
+      <br />
+      <button type="submit" class="button" [disabled]="cvForm.invalid">
+        Soumettre
+      </button>
+    </div>
+    <div>
+      *je cetifie honn^éte et sincére mes données.
+      <input
+        placeholder="certification"
+        type="checkbox"
+        id="certification"
+        formControlName="certification"
+      />
+    </div>
+  </form>
+</div>

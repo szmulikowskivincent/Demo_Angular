@@ -1,0 +1,64 @@
+/*@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";*/
+
+.container {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  max-inline-size: 390px;
+  padding: 25px;
+  border-radius: 5px;
+  background-color: rgb(224, 240, 243);
+  border: 1.5px solid rgb(105, 102, 102);
+}
+
+h2 {
+  padding: 0px;
+  color: rgb(0, 183, 255);
+}
+
+input {
+  background-color: aliceblue;
+  border: 2.5px solid rgb(105, 102, 102);
+  border-radius: 5px;
+  inline-size: 350px;
+  block-size: 35px;
+}
+
+select {
+  inline-size: 360px;
+  block-size: 40px;
+  border-radius: 5px;
+  border: 2.5px solid rgb(105, 102, 102);
+}
+
+button {
+  background-color: rgb(6, 173, 14);
+  border: solid 2.5px rgb(255, 255, 255);
+  color: aliceblue;
+  border-radius: 5px;
+  inline-size: 150px;
+  block-size: 35px;
+  margin: 10px;
+  size: 25px;
+}
+
+.error-message {
+  color: red;
+  margin-block-start: 5px;
+}
+
+footer {
+  position: absolute;
+  inset-block-end: 0;
+  inline-size: 100%;
+  inline-size: 2080px;
+  block-size: 35px;
+  margin: 10px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: rgb(224, 240, 243);
+  border: 1.5px solid rgb(105, 102, 102);
+  color: rgb(0, 0, 0);
+}

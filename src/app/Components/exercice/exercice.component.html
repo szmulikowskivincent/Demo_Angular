@@ -1,0 +1,17 @@
+<p align="center">😀 Thank you for this new way to use Angular!!!</p>
+<!--Template Chronométre-->
+<div class="container">
+  <h1>Angular Timekeeper</h1>
+  <div class="timer">
+    <p>
+      {{ minutes.toString().padStart(2, "0") }} minutes
+      {{ seconds.toString().padStart(2, "0") }} secondes
+    </p>
+  </div>
+  <div class="controls">
+    <button (click)="startTimer()" [disabled]="running">Start</button>
+    <button (click)="pauseTimer()" [disabled]="!running">Pause</button>
+    <button (click)="resetTimer()">Reset</button>
+  </div>
+</div>
+<footer align="center">Szmulikowski Vincent ❙❙ exo.chronométre Angular</footer>

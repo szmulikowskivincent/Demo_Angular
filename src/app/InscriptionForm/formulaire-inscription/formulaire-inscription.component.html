@@ -1,0 +1,375 @@
+<div class="container" id="tout2">
+  <form [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()">
+    <!-- Partie administrative -->
+    <h2 align="center">Registration</h2>
+    <!-- Ajout de la photo -->
+    <div id="tout4">
+      <input
+        style="margin: 10px"
+        type="file"
+        accept="image/*"
+        id="profilePicture"
+        name="profilePicture"
+        (change)="onFileSelected($event)"
+        [required]="true"
+        required="true"
+      />
+    </div>
+    <br /><br />
+    <div id="tout4">
+      <img
+        width="15%"
+        [src]="profilePictureUrl"
+        alt="Profile Picture"
+        class="profile-picture"
+        required="true"
+      />
+    </div>
+    <br />
+    <div
+      align="center"
+      style="color: red"
+      *ngIf="!profilePictureUrl"
+      required=""
+    >
+      * picture is required
+    </div>
+    <input
+      type="email"
+      formControlName="email"
+      placeholder="Email"
+      id="email"
+      name="email"
+      class="form-control"
+      autocomplete="on"
+      [required]="true"
+      required="true"
+      minlength="8"
+      maxlength="35"
+      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+    />
+    <br />
+    <div align="center" style="color: red" *ngIf="email" required="">
+      * email is required
+    </div>
+    <input
+      type="password"
+      formControlName="password"
+      placeholder="Password"
+      id="password"
+      name="password"
+      class="form-control"
+      autocomplete="off"
+      [required]="true"
+      required="true"
+      minlength="8"
+      maxlength="12"
+    />
+    <br />
+    <div align="center" style="color: red" *ngIf="password" required="">
+      * password is required
+    </div>
+    <input
+      type="password"
+      formControlName="confirmPassword"
+      placeholder="Confirm Password"
+      id="confirmPassword"
+      name="confirmPassword"
+      class="form-control"
+      autocomplete="off"
+      [required]="true"
+      required="true"
+      minlength="8"
+      maxlength="12"
+    />
+    <br />
+    <div align="center" style="color: red" *ngIf="email" required="">
+      * confirm email is required
+    </div>
+    <input
+      type="text"
+      formControlName="lastname"
+      placeholder="Lastname"
+      id="lastname"
+      name="lastname"
+      class="form-control"
+      autocomplete="on"
+      [required]="true"
+      required="true"
+      minlength="5"
+      maxlength="25"
+    />
+    <br />
+    <div align="center" style="color: red" *ngIf="lastname" required="">
+      * lastname is required
+    </div>
+    <input
+      type="text"
+      formControlName="firstname"
+      placeholder="Firstname"
+      id="firstname"
+      name="firstname"
+      class="form-control"
+      autocomplete="on"
+      [required]="true"
+      required="true"
+      minlength="5"
+      maxlength="25"
+    />
+    <br />
+    <div align="center" style="color: red" *ngIf="firstname" required="">
+      * firstname is required
+    </div>
+    <input
+      type="date"
+      formControlName="dateNaissance"
+      placeholder="Date de naissance"
+      class="date"
+      [required]="true"
+      required="true"
+    />
+    <br />
+    <div align="center" style="color: red" *ngIf="birdate" required="">
+      * birdate is required
+    </div>
+    <label>
+      <select
+        formControlName="genre"
+        placeholder="Genre"
+        [required]="true"
+        required="true"
+      >
+        <option value="" disabled selected>Select Genre</option>
+        <option value="Homme">Homme</option>
+        <option value="Femme">Femme</option>
+        <option value="Autre">Autre</option>
+      </select> </label
+    ><br />
+    <div align="center" style="color: red" *ngIf="genre" required="">
+      * genre is required
+    </div>
+    <input
+      type="text"
+      formControlName="nourrituresBoissons"
+      placeholder="Nourritures et boissons"
+      [required]="true"
+      required="true"
+    />
+    <br />
+    <div
+      align="center"
+      style="color: red"
+      *ngIf="nourritureboisson"
+      required=""
+    >
+      * nourriture et boisson is required
+    </div>
+    <button
+      type="submit"
+      [disabled]="!inscriptionForm.valid"
+      class="button"
+      value="S'inscrire"
+    >
+      S'inscrire
+    </button>
+  </form>
+</div>
+<footer align="center">
+  Szmulikowski Vincent ❙❙ exo.formulaire.Inscription-rencontre
+</footer>
+
+<!--**************************************************-->
+<!--Deuxiéme formulaire avec validateurs et directives-->
+<!--**************************************************-->
+<br />
+<div class="container2" id="tout2">
+  <form [formGroup]="inscriptionForm">
+    <img align="right" src="assets\logo_RencontreSanté.png" width="35%" />
+    <div id="tout4">
+      <input
+        style="margin: 25px"
+        type="file"
+        accept="image/*"
+        id="profilePicture"
+        name="profilePicture"
+        (change)="onFileSelected($event)"
+        [required]="true"
+        required="true"
+      />
+    </div>
+    <br /><br />
+    <div id="tout4">
+      <img
+        width="5%"
+        [src]="profilePictureUrl"
+        alt="Profile Picture"
+        class="profile-picture"
+        required="true"
+      />
+    </div>
+    <div
+      align="center"
+      style="color: red"
+      *ngIf="!profilePictureUrl"
+      required=""
+    >
+      * picture is required
+    </div>
+    <input
+      type="email"
+      formControlName="email"
+      placeholder="Email"
+      id="email"
+      name="email"
+      class="form-control"
+      autocomplete="on"
+      [required]="true"
+      required="true"
+      minlength="8"
+      maxlength="35"
+      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+    /><input
+      type="date"
+      formControlName="dateNaissance"
+      placeholder="Date de naissance"
+      class="date"
+      [required]="true"
+      required="true"
+    />
+    <div align="center" style="color: red" *ngIf="email" required="">
+      * email is required
+    </div>
+    <div align="center" style="color: red" *ngIf="email" required="">
+      * confirm email is required
+    </div>
+    <br />
+    <input
+      type="text"
+      formControlName="lastname"
+      placeholder="Lastname"
+      id="lastname"
+      name="lastname"
+      class="form-control"
+      autocomplete="on"
+      [required]="true"
+      required="true"
+      minlength="5"
+      maxlength="25"
+    />
+    <input
+      type="text"
+      formControlName="firstname"
+      placeholder="Firstname"
+      id="firstname"
+      name="firstname"
+      class="form-control"
+      autocomplete="on"
+      [required]="true"
+      required="true"
+      minlength="5"
+      maxlength="25"
+    />
+    <br />
+    <label>
+      <select
+        formControlName="genre"
+        placeholder="Genre"
+        [required]="true"
+        required="true"
+      >
+        <option value="" placeholder="Genre" disabled selected>
+          Select Genre
+        </option>
+        <option value="Homme">Homme</option>
+        <option value="Femme">Femme</option>
+        <option value="Autre">Autre</option>
+      </select>
+    </label>
+    <input
+      type="text"
+      formControlName="nourrituresBoissons"
+      placeholder="Nourritures et boissons"
+      [required]="true"
+      required="true"
+    />
+    <br />
+    <div
+      align="center"
+      style="color: red"
+      *ngIf="nourritureboisson"
+      required=""
+    >
+      * nourriture et boisson is required
+    </div>
+    <input
+      type="password"
+      formControlName="confirmPassword"
+      placeholder="Confirm Password"
+      id="confirmPassword"
+      name="confirmPassword"
+      class="form-control"
+      autocomplete="off"
+      [required]="true"
+      required="true"
+      minlength="8"
+      maxlength="12"
+    />
+    <input
+      type="password"
+      formControlName="confirmPassword"
+      placeholder="Confirm Password"
+      id="confirmPassword"
+      name="confirmPassword"
+      class="form-control"
+      autocomplete="off"
+      [required]="true"
+      required="true"
+      minlength="8"
+      maxlength="12"
+    />
+    <div align="center" style="color: red" *ngIf="password" required="">
+      * password is required
+    </div>
+
+    <br />
+    <button
+      style="
+        text-align: center;
+        border: 2px solid #757474;
+        background-color: rgb(97, 193, 223);
+        border: none;
+        color: #ffffff;
+        padding: 11px 28px;
+        font-size: 20px;
+        margin: 5px;
+        inline-size: 690px;
+        border-radius: 5px;
+      "
+      type="submit"
+      [disabled]="inscriptionForm.valid"
+      class="button"
+      value="S'inscrire"
+      onclick="window.location.href='https://www.rencontre-sante.com/';"
+    >
+      S'inscrire
+    </button>
+    <button
+      style="
+        text-align: center;
+        border: 2px solid #757474;
+        background-color: rgb(255, 0, 0);
+        border: none;
+        color: #ffffff;
+        padding: 11px 28px;
+        font-size: 20px;
+        margin: 5px;
+        inline-size: 690px;
+        border-radius: 5px;
+      "
+      class="button"
+      type="reset"
+    >
+      Reset
+    </button>
+  </form>
+</div>

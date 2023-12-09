@@ -1,0 +1,73 @@
+.container {
+  margin-block-start: 50px;
+  max-inline-size: 100px;
+  align-items: left;
+  margin: 10px;
+  padding: 0px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  border: 1.5px solid rgb(105, 102, 102);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    inline-size: 830px;
+    block-size: 175px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(224, 240, 243);
+    border: 1.5px solid rgb(105, 102, 102);
+  }
+
+h4 {
+  padding: 0px;
+  color: rgb(0, 183, 255);
+}
+
+input {
+  background-color: aliceblue;
+  border: solid 2.5px rgb(104, 102, 102);
+  border-radius: 5px;
+  inline-size: 350px;
+  block-size: 35px;
+}
+
+button {
+  background-color: rgb(6, 173, 14);
+  border: solid 2.5px rgb(255, 255, 255);
+  color: aliceblue;
+  border-radius: 5px;
+  inline-size: 100px;
+  block-size: 25px;
+  margin: 0.1cm;
+  font-size: 15px;
+}
+
+.shopping-list {
+  list-style-type: none; 
+  padding: 0px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+ /* Ajoute un espace entre les éléments de la liste */
+.shopping-list li {
+  margin-block-end: 0px; 
+}
+
+footer {
+  position: absolute;
+  inset-block-end: 0;
+  inline-size: 100%;
+  inline-size: 2080px;
+  block-size: 35px;
+  margin: 10px;
+  padding: 2px;
+  border-radius: 5px;
+  background-color: rgb(224, 240, 243);
+  border: 1.5px solid rgb(105, 102, 102);
+  color: rgb(0, 0, 0);
+}

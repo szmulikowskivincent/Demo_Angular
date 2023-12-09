@@ -1,0 +1,41 @@
+<div class="container">
+  <h2 align="center">Add Article</h2>
+  <label for="itemName"></label>
+  <select class="select" id="itemName" [(ngModel)]="newItem" required>
+    <option value="" disabled>Select new-article</option>
+    <option value="Coca">🥤Coca</option>
+    <option value="Pain">🍞Pain</option>
+    <option value="Lait">🍶Lait</option>
+    <option value="Beurre">🧈Beurre</option>
+    <option value="Shampoing">🛀Shampoing</option>
+    <option value="Oeufs">🥚Oeufs</option>
+    <option value="Riz">🥢Riz</option>
+    <option value="Légume">🥬Légume</option>
+  </select>
+  <!-- Ajouter un message d'erreur si le champ itemName n'est pas rempli -->
+  <div align="center" *ngIf="!newItem" class="error-message">
+    Item Name is required!
+  </div>
+  <br /><br />
+  <label for="itemQuantity"></label>
+  <input
+    id="itemQuantity"
+    type="number"
+    required="required"
+    min="1"
+    max="5"
+    [(ngModel)]="quantity"
+    placeholder="Enter quantity"
+  />
+  <!-- Ajouter des messages de notification -->
+  <div align="center" *ngIf="!isQuantityExceeded" class="error-message">
+    Quantity exceeded! Maximum is 5.
+  </div>
+  <br /><br />
+  <!-- Afficher la date et l'heure -->
+  <button (click)="addItem()" [disabled]="isSubmitDisabled()" type="submit">
+    Add
+  </button>
+  <button (click)="navigateToShoppingList()">Go to Shopping List</button>
+</div>
+<footer align="center">Szmulikowski Vincent ❙❙ exo.item Angular</footer>
